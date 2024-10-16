@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Dropdown from "./components/Dropdown";
+import Sidebar from "./Sidebar";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -19,10 +20,10 @@ function App() {
   return (
     <div className="relative w-full mx-auto overflow-hidden bg-zinc-900 h-dvh">
       <div className="absolute inset-0 flex gap-6 lg:px-6 lg:pt-10 flex-nowrap">
-        {/* Filters */}
-        <form className="hidden w-64 h-full text-white bg-zinc-900 lg:block">
-          Side bar
-        </form>
+        {/* Sidebar */}
+        <div className="hidden w-64 h-full text-gray-300 bg-zinc-900 lg:block">
+          <Sidebar />
+        </div>
 
         {/* Task grid */}
         <div className="flex relative flex-col flex-1 p-2 lg:p-6 overflow-hidden bg-opacity-0 bg-[url('/images/irham-setyaki-CQxj1R1hKts-unsplash.jpg')] bg-no-repeat bg-cover flex-nowrap lg:rounded-t-xl">
